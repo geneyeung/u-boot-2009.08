@@ -751,7 +751,7 @@ static void PingStart(void)
 #if defined(CONFIG_NET_MULTI)
 	printf ("Using %s device\n", eth_get_name());
 #endif	/* CONFIG_NET_MULTI */
-	NetSetTimeout (10000UL, PingTimeout);
+	NetSetTimeout (500UL, PingTimeout);
 	NetSetHandler (PingHandler);
 
 	PingSend();
