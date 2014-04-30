@@ -390,7 +390,7 @@ static void setFecDuplexSpeed(volatile fec_t *fecp, unsigned char addr,
 	}
 
 	/*wait the cable link*/
-	for (cnt = 0; cnt < 20; cnt++) {
+	for (cnt = 0; cnt < 25; cnt++) {
 		val = 0;
 		ret = __fec_mii_read(fecp, addr, PHY_BMSR, &val);
 		if (val & PHY_BMSR_LS)
